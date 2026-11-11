@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lab 5 (buffer geometry)</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        aside {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 8px;
+            background: #222;
+            color: white;
+            font: 14px sans-serif;
+        }
+        details { max-width: 34rem; }
+        summary { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <aside>
+        <span id="normals">Smooth normals. Press F to switch.</span>
+        <details>
+            <summary>Crystal notes</summary>
+            <p>The crystal has six unique vertices and eight triangular faces. The indexed geometry reuses the six vertices and averages the normals at shared corners, giving the crystal smooth highlights. Press <kbd>F</kbd> to compare it with the faceted version, which uses 24 position entries (three per face) so each triangle has its own normal. With the default front-side material, reversing two indices in a triangle flips the face inward and makes it disappear when viewed from outside. The submitted geometry uses outward-facing winding on all eight triangles.</p>
+        </details>
+    </aside>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
